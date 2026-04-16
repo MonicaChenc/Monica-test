@@ -111,3 +111,45 @@
 .navbar__items--left .navbar__link {
   transform: translateY(-1px);
 }
+
+/* Keep "last updated" subtle */
+.theme-last-updated {
+  margin-top: 0.25rem;
+  margin-bottom: 0.75rem;
+  font-size: 0.82rem;
+  color: var(--ifm-color-emphasis-600);
+}
+
+.theme-last-updated strong {
+  font-weight: 500;
+}
+
+/* Top-right navbar search (UI only) */
+.top-nav-search {
+  display: flex;
+  align-items: center;
+  margin-right: 0.45rem;
+}
+
+.top-nav-search input {
+  width: 180px;
+  height: 34px;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 8px;
+  padding: 0 0.7rem 0 2.2rem;
+  font-size: 0.88rem;
+  outline: none;
+  background: var(--ifm-background-surface-color);
+  color: var(--ifm-font-color-base);
+  background-repeat: no-repeat;
+  background-position: 0.75rem center;
+  background-size: 14px 14px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%230f172a' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='11' cy='11' r='8'/%3E%3Cpath d='M21 21l-4.35-4.35'/%3E%3C/svg%3E");
+}
+
+@media (max-width: 996px) {
+  .top-nav-search {
+    display: none;
+  }
+}
+

@@ -11,29 +11,32 @@ type FeatureItem = {
 
 const FeatureList: FeatureItem[] = [
   {
-    title: 'Simple Setup',
+    title: 'Enterprise-Ready Structure',
     Svg: require('@site/static/img/m-feature-core.svg').default,
     description: (
       <>
-        Start quickly with a clean structure for docs, guides, and FAQs.
+        Provide clear paths for onboarding, deployment, and operations with a
+        consistent docs hierarchy.
       </>
     ),
   },
   {
-    title: 'Content First',
+    title: 'Localization for Global Teams',
     Svg: require('@site/static/img/m-feature-guide.svg').default,
     description: (
       <>
-        Keep your documentation organized and easy to navigate for readers.
+        Deliver bilingual content across English and Chinese with one shared
+        documentation workflow.
       </>
     ),
   },
   {
-    title: 'Fast Publishing',
+    title: 'Controlled Publishing Pipeline',
     Svg: require('@site/static/img/m-feature-build.svg').default,
     description: (
       <>
-        Build and deploy updates with confidence through your GitHub workflow.
+        Keep content reliable through build validation and automated deployment
+        from GitHub Actions.
       </>
     ),
   },
@@ -42,10 +45,10 @@ const FeatureList: FeatureItem[] = [
 function Feature({title, Svg, description}: FeatureItem) {
   return (
     <div className={clsx('col col--4')}>
-      <div className="text--center">
+      <div className={styles.iconWrap}>
         <Svg className={styles.featureSvg} role="img" />
       </div>
-      <div className="text--center padding-horiz--md">
+      <div className={styles.featureBody}>
         <Heading as="h3">{title}</Heading>
         <p>{description}</p>
       </div>

@@ -4,20 +4,64 @@
  */
 
 .heroBanner {
-  padding: 4rem 0;
+  min-height: 34vh;
+  display: flex;
+  align-items: center;
+  padding: 3rem 0;
   text-align: center;
   position: relative;
   overflow: hidden;
+  background: linear-gradient(135deg, #0f172a 0%, #1d4ed8 100%);
+}
+
+.heroTitle {
+  color: #ffffff;
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1.1;
+  margin-bottom: 0.75rem;
+}
+
+.heroSubtitle {
+  color: rgba(255, 255, 255, 0.9);
+  max-width: 860px;
+  margin: 0 auto 1.25rem;
+  font-size: 1.05rem;
+}
+
+.heroSearch {
+  max-width: 660px;
+  margin: 0 auto 1.2rem;
+}
+
+.heroSearch :global(.DocSearch-Button),
+.heroSearch :global(.navbar__search-input) {
+  width: 100%;
+  max-width: 100%;
+}
+
+.heroSearchInput {
+  width: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  border-radius: 10px;
+  padding: 0.62rem 0.85rem 0.62rem 2.35rem;
+  background: rgba(255, 255, 255, 0.13);
+  color: #ffffff;
+  font-size: 0.96rem;
+  outline: none;
+  background-repeat: no-repeat;
+  background-position: 0.8rem center;
+  background-size: 16px 16px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23ffffff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='11' cy='11' r='8'/%3E%3Cpath d='M21 21l-4.35-4.35'/%3E%3C/svg%3E");
+}
+
+.heroSearchInput::placeholder {
+  color: rgba(255, 255, 255, 0.78);
 }
 
 @media screen and (max-width: 996px) {
   .heroBanner {
-    padding: 2rem;
+    min-height: 32vh;
+    padding: 2rem 1rem;
   }
 }
 
-.buttons {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}

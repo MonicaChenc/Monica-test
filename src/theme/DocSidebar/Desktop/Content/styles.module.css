@@ -1,0 +1,44 @@
+@media (min-width: 997px) {
+  .menu {
+    flex-grow: 1;
+    padding: 0.5rem;
+  }
+  @supports (scrollbar-gutter: stable) {
+    .menu {
+      padding: 0.5rem 0 0.5rem 0.5rem;
+      scrollbar-gutter: stable;
+    }
+  }
+
+  .menuWithAnnouncementBar {
+    margin-bottom: var(--docusaurus-announcement-bar-height);
+  }
+}
+
+.searchBox {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  padding: 0.25rem 0.5rem 0.6rem 0.25rem;
+  background: var(--ifm-background-color);
+}
+
+.searchInput {
+  width: 100%;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 8px;
+  padding: 0.45rem 0.65rem;
+  font-size: 0.9rem;
+  outline: none;
+}
+
+.searchInput:focus {
+  border-color: var(--ifm-color-primary);
+  box-shadow: 0 0 0 2px rgba(46, 133, 85, 0.15);
+}
+
+.emptyResult {
+  color: var(--ifm-color-emphasis-600);
+  font-size: 0.85rem;
+  padding: 0.5rem 0.75rem;
+}

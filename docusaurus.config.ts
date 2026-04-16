@@ -49,21 +49,17 @@ const config: Config = {
       {
         docs: {
           sidebarPath: './sidebars.ts',
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/MonicaChenc/Monica-test/tree/main/',
+          showLastUpdateTime: true,
+          showLastUpdateAuthor: false,
         },
         blog: {
           showReadingTime: true,
+          showLastUpdateTime: true,
+          showLastUpdateAuthor: false,
           feedOptions: {
             type: ['rss', 'atom'],
             xslt: true,
           },
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/MonicaChenc/Monica-test/tree/main/',
           // Useful options to enforce blogging best practices
           onInlineTags: 'warn',
           onInlineAuthors: 'warn',
@@ -98,6 +94,12 @@ const config: Config = {
         {to: '/docs/getting-started', label: 'Getting Started', position: 'left'},
         {to: '/docs/guides/installation', label: 'Guides', position: 'left'},
         {to: '/docs/faq', label: 'FAQ', position: 'left'},
+        {
+          type: 'html',
+          position: 'right',
+          value:
+            '<div class="top-nav-search"><input type="search" placeholder="Search docs" aria-label="Top search" /></div>',
+        },
         {
           type: 'localeDropdown',
           position: 'right',
