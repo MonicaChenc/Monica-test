@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b1220"/>
+      <stop offset="100%" stop-color="#1e3a8a"/>
+    </linearGradient>
+    <linearGradient id="logoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1d4ed8"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bgGrad)"/>
+  <circle cx="1060" cy="120" r="180" fill="#1f2937" opacity="0.35"/>
+  <circle cx="140" cy="560" r="220" fill="#1f2937" opacity="0.25"/>
+  <rect x="100" y="120" width="130" height="130" rx="24" fill="url(#logoGrad)"/>
+  <path d="M118 231V139h26l21 28 21-28h26v92h-23v-50l-24 34-24-34v50h-23z" fill="#ffffff"/>
+  <path d="M191 139h15l-15 20h-11z" fill="#93c5fd" opacity="0.9"/>
+  <text x="270" y="185" font-family="Arial, sans-serif" font-size="66" font-weight="700" fill="#ffffff">Monica Docs</text>
+  <text x="270" y="250" font-family="Arial, sans-serif" font-size="34" fill="#cbd5e1">Documentation site powered by Docusaurus</text>
+</svg>

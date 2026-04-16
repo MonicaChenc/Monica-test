@@ -7,7 +7,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 const config: Config = {
   title: 'Monica Docs',
   tagline: 'Documentation site powered by Docusaurus',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/m-logo.svg',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
   future: {
@@ -29,10 +29,18 @@ const config: Config = {
 
   // Even if you don't use internationalization, you can use this field to set
   // useful metadata like html lang. For example, if your site is Chinese, you
-  // may want to replace "en" with "zh-Hans".
+  // may want to replace "en" with "zh-CN".
   i18n: {
     defaultLocale: 'en',
-    locales: ['en'],
+    locales: ['en', 'zh-CN'],
+    localeConfigs: {
+      en: {
+        label: 'English',
+      },
+      'zh-CN': {
+        label: '中文',
+      },
+    },
   },
 
   presets: [
@@ -70,28 +78,30 @@ const config: Config = {
 
   themeConfig: {
     // Replace with your project's social card
-    image: 'img/docusaurus-social-card.jpg',
+    image: 'img/m-social-card.svg',
     colorMode: {
       respectPrefersColorScheme: true,
     },
     navbar: {
       title: 'Monica Docs',
+      hideOnScroll: true,
       logo: {
-        alt: 'My Site Logo',
-        src: 'img/logo.svg',
+        alt: 'Monica Docs Logo',
+        src: 'img/m-logo.svg',
       },
       items: [
         {
-          type: 'docSidebar',
-          sidebarId: 'tutorialSidebar',
+          to: '/docs/intro',
           position: 'left',
-          label: 'Tutorial',
+          label: 'Docs',
         },
-        {to: '/blog', label: 'Blog', position: 'left'},
+        {to: '/docs/getting-started', label: 'Getting Started', position: 'left'},
+        {to: '/docs/guides/installation', label: 'Guides', position: 'left'},
+        {to: '/docs/faq', label: 'FAQ', position: 'left'},
         {
-          href: 'https://github.com/MonicaChenc/Monica-test',
-          label: 'GitHub',
+          type: 'localeDropdown',
           position: 'right',
+          className: 'locale-icon-only',
         },
       ],
     },

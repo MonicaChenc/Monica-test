@@ -28,3 +28,86 @@
   --ifm-color-primary-lightest: #4fddbf;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
+
+/* Locale dropdown: keep navbar clean with globe only */
+.navbar .iconLanguage,
+.navbar .iconLanguage::before,
+.navbar [class*='iconLanguage'],
+.navbar [class*='iconLanguage']::before,
+.locale-icon-only .iconLanguage,
+.locale-icon-only .iconLanguage::before,
+.locale-icon-only .dropdown__link svg,
+.locale-icon-only .dropdown__link::before,
+.locale-icon-only .dropdown__link::after {
+  display: none !important;
+  content: none !important;
+}
+
+.locale-icon-only > .navbar__link,
+.locale-icon-only.navbar__link {
+  font-size: 0 !important;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  min-height: var(--ifm-navbar-height);
+  vertical-align: middle;
+}
+
+.locale-icon-only > .navbar__link::before,
+.locale-icon-only.navbar__link::before {
+  content: '';
+  display: inline-block;
+  width: 19px;
+  height: 19px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%230f172a' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='10'/%3E%3Cpath d='M2 12h20'/%3E%3Cpath d='M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z'/%3E%3C/svg%3E");
+  transform: translateY(1px);
+}
+
+.locale-icon-only > .navbar__link,
+.locale-icon-only.navbar__link {
+  padding-left: 0.5rem !important;
+  padding-right: 0.5rem !important;
+}
+
+.navbar__item.locale-icon-only {
+  margin-right: 0.1rem;
+}
+
+[data-theme='dark'] .locale-icon-only > .navbar__link::before,
+[data-theme='dark'] .locale-icon-only.navbar__link::before {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23f8fafc' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='10'/%3E%3Cpath d='M2 12h20'/%3E%3Cpath d='M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z'/%3E%3C/svg%3E");
+}
+
+/* Top nav polish inspired by enterprise docs layouts */
+.navbar {
+  border-bottom: 1px solid var(--ifm-toc-border-color);
+}
+
+.navbar__inner,
+.navbar__items {
+  height: var(--ifm-navbar-height);
+  align-items: center;
+}
+
+.navbar__link {
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2rem;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  line-height: 1.15;
+}
+
+.navbar__items--left .navbar__item {
+  margin-right: 0.2rem;
+}
+
+.navbar__items--left .navbar__link {
+  transform: translateY(-1px);
+}
