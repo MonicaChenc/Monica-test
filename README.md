@@ -1,41 +1,41 @@
-# Website
+# Monica Docs
 
-This website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator.
+This documentation website is built with [Docusaurus](https://docusaurus.io/).
 
-## Installation
-
-```bash
-yarn
-```
-
-## Local Development
+## Install dependencies
 
 ```bash
-yarn start
+npm ci
 ```
 
-This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
+## Local development
+
+```bash
+npm run start
+```
+
+This starts a local development server and opens your site in a browser.
 
 ## Build
 
 ```bash
-yarn build
+npm run build
 ```
 
-This command generates static content into the `build` directory and can be served using any static contents hosting service.
+This generates static files into the `build` directory.
 
-## Deployment
+## Deploy to GitHub Pages
 
-Using SSH:
+Deployment is handled by GitHub Actions in `.github/workflows/deploy.yml`.
 
-```bash
-USE_SSH=true yarn deploy
-```
+When you push to the `main` branch, the workflow will:
 
-Not using SSH:
+1. Install dependencies
+2. Build the site
+3. Deploy the `build` output to GitHub Pages
 
-```bash
-GIT_USER=<Your GitHub username> yarn deploy
-```
+### GitHub Pages setup (one-time)
 
-If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
+1. Go to your repository Settings
+2. Open Pages
+3. In "Build and deployment", set Source to "GitHub Actions"
