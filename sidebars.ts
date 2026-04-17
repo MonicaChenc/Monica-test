@@ -25,6 +25,11 @@ const sidebars: SidebarsConfig = {
       label: 'Guides',
       items: ['guides/installation'],
     },
+    {
+      type: 'category',
+      label: 'API',
+      items: ['api/overview'],
+    },
     'faq',
   ],
 };

@@ -1,8 +1,9 @@
 ---
 sidebar_position: 2
+title: 快速开始
 ---
 
-# Getting Started
+# 快速开始
 
 本页提供本地运行文档站点的快速检查清单。
 

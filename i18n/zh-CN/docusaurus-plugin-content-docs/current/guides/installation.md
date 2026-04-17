@@ -1,8 +1,9 @@
 ---
 sidebar_position: 1
+title: 安装指南
 ---
 
-# Installation Guide
+# 安装指南
 
 本指南说明贡献者的标准初始化流程。
 

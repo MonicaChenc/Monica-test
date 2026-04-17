@@ -1,0 +1,14 @@
+{
+  "sidebar.tutorialSidebar.category.Getting Started": {
+    "message": "快速开始",
+    "description": "侧边栏分类「Getting Started」的中文标签"
+  },
+  "sidebar.tutorialSidebar.category.Guides": {
+    "message": "指南",
+    "description": "侧边栏分类「Guides」的中文标签"
+  },
+  "sidebar.tutorialSidebar.category.API": {
+    "message": "接口（API）",
+    "description": "侧边栏分类「API」的中文标签"
+  }
+}

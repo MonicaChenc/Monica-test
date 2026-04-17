@@ -1,8 +1,9 @@
 ---
 sidebar_position: 99
+title: 常见问题
 ---
 
-# FAQ
+# 常见问题
 
 ## 为什么 GitHub Actions 会提示 Node.js 弃用告警？
 

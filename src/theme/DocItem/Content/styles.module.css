@@ -1,0 +1,14 @@
+.docTitleHeader {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: flex-start;
+  gap: 0.2rem 0.35rem;
+  margin-bottom: var(--ifm-heading-margin-bottom);
+}
+
+.docTitleHeading {
+  flex: 0 1 auto;
+  min-width: 0;
+  margin-bottom: 0 !important;
+}
