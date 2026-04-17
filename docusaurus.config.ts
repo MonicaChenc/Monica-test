@@ -51,6 +51,15 @@ const config: Config = {
           sidebarPath: './sidebars.ts',
           showLastUpdateTime: true,
           showLastUpdateAuthor: false,
+          lastVersion: 'current',
+          versions: {
+            current: {
+              label: 'Latest',
+            },
+            '1.0': {
+              label: 'v1.0',
+            },
+          },
         },
         blog: {
           showReadingTime: true,
@@ -94,6 +103,11 @@ const config: Config = {
         {to: '/docs/getting-started', label: 'Getting Started', position: 'left'},
         {to: '/docs/guides/installation', label: 'Guides', position: 'left'},
         {to: '/docs/faq', label: 'FAQ', position: 'left'},
+        {
+          type: 'docsVersionDropdown',
+          position: 'right',
+          className: 'docs-version-dropdown-top',
+        },
         {
           type: 'html',
           position: 'right',

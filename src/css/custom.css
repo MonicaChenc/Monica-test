@@ -153,3 +153,8 @@
   }
 }
 
+/* Hide docs version switcher on homepage only */
+html.plugin-pages .docs-version-dropdown-top {
+  display: none !important;
+}
+
