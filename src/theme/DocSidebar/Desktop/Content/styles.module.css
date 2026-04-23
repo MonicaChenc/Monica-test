@@ -1,5 +1,7 @@
 @media (min-width: 997px) {
   .menu {
+    display: flex;
+    flex-direction: column;
     flex-grow: 1;
     padding: 0.5rem;
   }
@@ -41,4 +43,32 @@
   color: var(--ifm-color-emphasis-600);
   font-size: 0.85rem;
   padding: 0.5rem 0.75rem;
+}
+
+.sidebarFooter {
+  margin-top: auto;
+  padding: 0.75rem 0.5rem 0.35rem 0.25rem;
+  background: var(--ifm-background-color);
+}
+
+.downloadPdfBtn {
+  display: inline-flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  height: 2rem;
+  border: 1px solid var(--ifm-color-primary);
+  border-radius: 8px;
+  color: var(--ifm-color-primary);
+  background: transparent;
+  font-size: 0.86rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.downloadPdfBtn:hover {
+  text-decoration: none;
+  color: var(--ifm-color-primary-dark);
+  border-color: var(--ifm-color-primary-dark);
+  background: var(--ifm-color-emphasis-100);
 }

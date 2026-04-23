@@ -1,6 +1,7 @@
 import React, {type ReactNode, useMemo, useState} from 'react';
 import clsx from 'clsx';
 import {ThemeClassNames} from '@docusaurus/theme-common';
+import useBaseUrl from '@docusaurus/useBaseUrl';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import {
   useAnnouncementBar,
@@ -67,6 +68,21 @@ export default function DocSidebarDesktopContent({
   const isZh = currentLocale.toLowerCase().startsWith('zh');
   const showAnnouncementBar = useShowAnnouncementBar();
   const [query, setQuery] = useState('');
+  const activePdfVersion = useMemo(() => {
+    const matchedVersion = path.match(/\/docs\/(\d+\.\d+)(\/|$)/)?.[1];
+    if (matchedVersion === '1.0') {
+      return '1.0';
+    }
+    return 'latest';
+  }, [path]);
+  const localeSuffix = currentLocale === 'zh-CN' ? 'zh-cn' : 'en-us';
+  const showVersionPdfDownload = currentLocale === 'en' || currentLocale === 'zh-CN';
+  const pdfDownloadUrl = useBaseUrl(
+    activePdfVersion === '1.0'
+      ? `/downloads/docs-v1.0-${localeSuffix}.pdf`
+      : `/downloads/docs-latest-${localeSuffix}.pdf`,
+  );
+  const downloadText = isZh ? '下载用户手册' : 'Download User Manual';
 
   const filteredSidebar = useMemo(
     () => filterSidebarItems(sidebar, query),
@@ -116,6 +132,16 @@ export default function DocSidebarDesktopContent({
             message: isZh ? '没有匹配标题' : 'No matching titles',
             description: 'Empty state when no docs title matches search',
           })}
+        </div>
+      )}
+      {showVersionPdfDownload && (
+        <div className={styles.sidebarFooter}>
+          <a
+            href={pdfDownloadUrl}
+            download
+            className={styles.downloadPdfBtn}>
+            {downloadText}
+          </a>
         </div>
       )}
     </nav>
