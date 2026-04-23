@@ -6,7 +6,7 @@ import Heading from '@theme/Heading';
 import MDXContent from '@theme/MDXContent';
 import type {Props} from '@theme/DocItem/Content';
 import {DocPageFirstH1Provider} from '../../../contexts/DocPageFirstH1Context';
-import DocPermalinkCopy from '../../../components/DocPermalinkCopy';
+import DocExportButtons from '../../../components/DocExportButtons';
 import styles from './styles.module.css';
 
 function useSyntheticTitle(): string | null {
@@ -29,12 +29,14 @@ export default function DocItemContent({children}: Props): ReactNode {
       docKey={docKey}
       skipMdxH1Copy={Boolean(syntheticTitle)}>
       <div className={clsx(ThemeClassNames.docs.docMarkdown, 'markdown')}>
+        <div className={styles.docActionsRow}>
+          <DocExportButtons />
+        </div>
         {syntheticTitle && (
           <header className={styles.docTitleHeader}>
             <Heading as="h1" className={styles.docTitleHeading}>
               {syntheticTitle}
             </Heading>
-            <DocPermalinkCopy />
           </header>
         )}
         <MDXContent>{children}</MDXContent>

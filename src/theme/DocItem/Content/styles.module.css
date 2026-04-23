@@ -1,3 +1,10 @@
+.docActionsRow {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+
 .docTitleHeader {
   display: flex;
   flex-wrap: wrap;
